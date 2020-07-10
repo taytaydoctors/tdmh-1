@@ -46,7 +46,7 @@ section.hero {
 }
 
 .menu__option {
-  height: 250px;
+  min-height: 250px;
   width: 250px;
   padding: 30px;
   border-radius: 8px;
