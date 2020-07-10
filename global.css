@@ -1,0 +1,313 @@
+:root {
+  --dark: #0E1952;
+  --purple: #4a47a3;
+  --purplelow: #4a47a350;
+  --green: #28e799;
+  --greenlow: #28e79950;
+  --white: #ffffff;
+  --grey: #878787;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--white);
+  color: #2c2c2e;
+  font-family: 'Work Sans', sans-serif;
+}
+
+button, .button {
+  --button-color: var(--purple);
+  display: block;
+  color: white;
+  outline: none;
+  border: none;
+  flex: 0;
+  padding: 18px;
+  margin-top: 2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  background-color: var(--button-color);
+  box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, .1),
+              0px 15px 30px var(--purplelow);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover,
+.button:hover {
+  box-shadow: 0px 18px 30px var(--purplelow);
+  transform: translateY(-5px);
+}
+
+header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2% 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--green);
+}
+
+a i {
+  margin-left: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover i {
+  transform: translateX(5px);
+}
+
+input:focus {
+  outline: none;
+  border: none;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+nav > a {
+  margin-left: 2.5rem;
+  text-decoration: none;
+  color: var(--dark);;
+}
+
+nav > a:hover {
+  color: var(--green);
+}
+
+.navigation__hamburger {
+  display: none;
+}
+
+.navigation__hamburger:hover {
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  color: var(--dark);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+footer nav {
+  margin: 5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  border-top: 1px solid var(--grey);
+}
+
+footer > nav > * {
+  margin: 0 2rem;
+  padding: 0;
+  list-style-type: none;
+}
+
+footer > nav > ul > li {
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+footer > small {
+  padding: 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: inherit;
+}
+
+.contact {
+  color: var(--dark);
+  margin-left: auto;
+}
+
+.contact a {
+  color: inherit;
+}
+
+.appointments__modal {
+  flex: 0;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: var(--purple);
+  color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, .15);
+  transform: translateY(-50%);
+  margin-top: 5rem;
+}
+
+.appointments__modal h1,
+.appointments__modal h2 {
+  text-align: left;
+  margin: 0;
+}
+
+.modal__content {
+  padding: 2rem 3rem;
+  margin: 1rem 0;
+  border-right: 1px solid white;
+}
+
+.modal__header {
+  color: white;
+}
+
+.modal__action {
+  padding: 3rem;
+}
+
+.modal__action a {
+  display: block;
+  background-color: var(--green);
+  box-shadow: 0px 15px 30px var(--greenlow);
+}
+
+.modal__action a:hover {
+  box-shadow: 0px 18px 30px var(--greenlow);
+}
+
+@media screen and (max-width: 750px) {
+  .contact {
+    display: none;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  header > nav {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    width: calc(100vw + 10%);
+    height: 100vh;
+    left: -10%;
+    top: 100%;
+    background: #f1f0f0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .navigation__hamburger {
+    cursor: pointer;
+    display: block;
+  }
+
+  .navigation__hamburger:hover {
+    transform: none;
+  }
+
+  header > nav > a {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  .appointments__modal {
+    flex-direction: column;
+    margin: 0;
+    margin-top: 20%;
+    margin-bottom: -50%;
+    border-radius: 0;
+  }
+
+  .modal__content {
+    text-align: center;
+    border-right: none;
+    padding: 0;
+    margin: 0 2rem;
+    margin-top: 3rem;
+  }
+
+  .appointments__modal h1,
+  .appointments__modal h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .modal__action {
+    margin: 0;
+    padding-top: 0;
+  }
+
+  footer nav {
+    flex-direction: column;
+  }
+
+  footer {
+    margin-top: 0;
+    padding-top: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer nav {
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 2.5rem;
+    border-top: none;
+  }
+
+  footer .address {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+}
