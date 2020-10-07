@@ -25,6 +25,7 @@ body {
 
 button, .button {
   --button-color: var(--purple);
+  position: relative;
   display: block;
   color: white;
   outline: none;
@@ -39,6 +40,24 @@ button, .button {
               0px 15px 30px var(--purplelow);
   text-decoration: none;
   transition: all 0.2s ease-in-out;
+}
+
+.button__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button__footnote {
+  margin-top: 0.4rem;
+  font-size: 0.7rem;
+  opacity: 0.6;
+
+}
+
+.button__footnote a {
+  color: var(--purple);
 }
 
 button:hover,
@@ -162,6 +181,10 @@ footer > small {
 
 footer a {
   color: inherit;
+}
+
+small a {
+  color: var(--purple);
 }
 
 .contact {
